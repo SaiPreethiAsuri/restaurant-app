@@ -3,6 +3,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const usersRouter = require('./routes/users.routes');
+const orderRouter = require('./routes/order.routes');
+const cartRouter = require('./routes/cart.routes');
+const foodItemRouter = require('./routes/foodItem.routes');
 const mongoose = require('mongoose');
 const app = express();
 
@@ -19,5 +22,8 @@ mongoose.connect(mongoDB)
   .catch(e => console.log('Error connecting to MongoDB'));
 
 app.use('/users', usersRouter);
+app.use('/order', orderRouter);
+app.use('/cart', cartRouter);
+app.use('/foodItem', foodItemRouter);
 
 module.exports = app;
