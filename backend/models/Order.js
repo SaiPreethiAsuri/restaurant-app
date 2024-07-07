@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+const { v4: uuid } = require('uuid');
 const OrderSchema = new Schema({
+  orderId: {
+    type: String,
+    default: uuid
+  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User'

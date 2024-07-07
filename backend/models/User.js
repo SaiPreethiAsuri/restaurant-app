@@ -9,6 +9,7 @@ const AddressSchema = new mongoose.Schema({
 });
 
 const UserSchema = new mongoose.Schema({
+  userId: { type: String, default: uuid },
   email: { type: String, required: true, unique: true },
   name: { type: String, required: false },
   password: { type: String, required: false },
