@@ -22,13 +22,17 @@ const OrderSchema = new Schema({
       }
     }
   ],
-  total: {
+  totalAmount: {
     type: Number,
     required: true
   },
+  currency: {
+    type: String,
+    default: 'USD'
+  },
   status: {
     type: String,
-    default: 'pending'
+    default: 'Ordered'
   }
 }, {timestamps: true});
 
