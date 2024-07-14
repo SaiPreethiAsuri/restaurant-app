@@ -1,5 +1,19 @@
 const FoodItem = require('../models/foodItem');
 
+const uploadImage = (image) => {
+  return new Promise((resolve, reject) => {
+    const imagePath = 'uploads/' + image.name;
+    const uploadPath = __dirname + '/../public/' + imagePath;
+    image.mv(uploadPath, (error) => {
+      if (error) {
+        reject({message: 'Error uploading image', error});
+      } else {
+        resolve(imagePath);
+      }
+    });
+  });
+};
+
 const foodItemController = {
   getFoodItems: async (req, res) => {
     try {
@@ -19,7 +33,11 @@ const foodItemController = {
   },
   createFoodItem: async (req, res) => {
     try {
-      const {name, description, price} = req.body;
+      let {name, description, price, image} = req.body;
+      // Upload Image if image is not string in uploads folder and set image path to image
+      if (typeof image !== 'string') {
+        image = await uploadImage(image);
+      }
       const foodItem = await FoodItem.create({name, description, price});
       return res.status(201).json({message: 'Create food item', data: foodItem});
     } catch (error) {
@@ -28,7 +46,11 @@ const foodItemController = {
   },
   updateFoodItem: async (req, res) => {
     try {
-      const {name, description, price} = req.body;
+      let {name, description, price, image} = req.body;
+      // Upload Image if image is not string in uploads folder and set image path to image
+      if (typeof image !== 'string') {
+        image = await uploadImage(image);
+      }
       const foodItem = await FoodItem.findOneAndUpdate({itemId: req.params.itemId}, {
         $set: {
           name,
