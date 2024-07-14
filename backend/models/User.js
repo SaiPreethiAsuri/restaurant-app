@@ -6,7 +6,7 @@ const AddressSchema = new mongoose.Schema({
   city: String,
   state: String,
   zip: String
-});
+},{ _id : false });
 
 const UserSchema = new mongoose.Schema({
   userId: { type: String, default: uuid },

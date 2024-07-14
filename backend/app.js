@@ -15,11 +15,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-let dev_db_url = 'mongodb://localhost:27017/express-mongoose';
+let dev_db_url = 'mongodb://localhost:27017/restaurant';
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB)
-  .then(r => console.log('Connected to MongoDB'))
-  .catch(e => console.log('Error connecting to MongoDB'));
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(() => console.log('Error connecting to MongoDB'));
 
 app.use('/users', usersRouter);
 app.use('/order', orderRouter);
