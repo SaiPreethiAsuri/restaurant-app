@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const foodItem = require('../controllers/foodItem.controller');
 
-router.get('/', foodItem.getFoodItems);
-router.get('/:id', foodItem.getFoodItem);
-router.post('/', foodItem.createFoodItem);
-router.put('/:id', foodItem.updateFoodItem);
-router.delete('/:id', foodItem.deleteFoodItem);
+router.get('/all', foodItem.getFoodItems);
+router.post('/create', foodItem.createFoodItem);
+router.put('/update/:itemId', foodItem.updateFoodItem);
+router.get('/:itemId', foodItem.getFoodItem);
+router.delete('/:itemId', foodItem.deleteFoodItem);
 
 module.exports = router;

@@ -15,6 +15,18 @@ const FoodItemSchema = new Schema({
   price: {
     type: Number,
     required: true
+  },
+  currency: {
+    type: String,
+    default: 'USD'
+  },
+  image: {
+    type: String,
+    default: 'https://via.placeholder.com/150'
+  },
+  category: {
+    type: String,
+    required: true
   }
 }, {timestamps: true});
 
