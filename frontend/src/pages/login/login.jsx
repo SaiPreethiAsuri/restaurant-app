@@ -21,7 +21,7 @@ const Login = () => {
             Login
           </Button>
           <div className='mb-3'>
-            <Link style={{textDecoration: 'none'}} className='text-primary' to='/register'>Don&apos;t have an account?</Link>
+            <Link style={{textDecoration: 'none', fontSize: '0.9em'}} className='text-primary' to='/register'>Don&apos;t have an account?</Link>
           </div>
         </Form>
       </Card>
