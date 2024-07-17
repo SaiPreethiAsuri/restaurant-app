@@ -1,7 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes} from "react-router-dom";
-import Auth from "./pages/login/auth.jsx";
+import Auth from "./pages/auth/auth.jsx";
 
 function App() {
   return (
