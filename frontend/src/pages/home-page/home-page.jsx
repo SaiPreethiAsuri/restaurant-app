@@ -1,6 +1,7 @@
 import CustomNavbar from "../../components/navbar/customNavbar.jsx";
 import {Col, Container, Row} from "react-bootstrap";
 import './home-page.css';
+import {Link} from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -54,40 +55,56 @@ const HomePage = () => {
         </Row>
         <Row>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/cake.png" alt="food" className="img-fluid mt-5"/>
-            <p>Cake</p>
+            <Link to='/category/cake' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/cake.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Cake</p>
+            </Link>
+          </Col>
+          <Col className='text-center/dessert'>
+            <Link to='/category' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/deserts.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Dessert</p>
+            </Link>
           </Col>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/deserts.png" alt="food" className="img-fluid mt-5"/>
-            <p>Dessert</p>
+            <Link to='/category/noodles' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/noodles.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Noodles</p>
+            </Link>
           </Col>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/noodles.png" alt="food" className="img-fluid mt-5"/>
-            <p>Noodles</p>
+            <Link to='/category/pasta' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/pasta.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Pasta</p>
+            </Link>
           </Col>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/pasta.png" alt="food" className="img-fluid mt-5"/>
-            <p>Pasta</p>
+            <Link to='/category/pure-veg' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/pure_veg.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Pure Veg</p>
+            </Link>
           </Col>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/pure_veg.png" alt="food" className="img-fluid mt-5"/>
-            <p>Pure Veg</p>
+            <Link to='/category/rolls' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/rolls.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Rolls</p>
+            </Link>
           </Col>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/rolls.png" alt="food" className="img-fluid mt-5"/>
-            <p>Rolls</p>
+            <Link to='/category/salad' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/salad.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Salad</p>
+            </Link>
           </Col>
           <Col className='text-center'>
-            <img src="src/assets/images/category_items/salad.png" alt="food" className="img-fluid mt-5"/>
-            <p>Salad</p>
-          </Col>
-          <Col className='text-center'>
-            <img src="src/assets/images/category_items/sandwich.png" alt="food" className="img-fluid mt-5"/>
-            <p>Sandwich</p>
+            <Link to='/category/sandwich' className={'text-decoration-none text-dark'}>
+              <img src="src/assets/images/category_items/sandwich.png" alt="food" className="img-fluid mt-5"/>
+              <p className='category-title'>Sandwich</p>
+            </Link>
           </Col>
         </Row>
       </Container>
-      <Container className='bg-body-secondary pb-5' style={{maxWidth: '1900px'}} >
+      <Container className='bg-body-secondary pb-5' style={{maxWidth: '1900px'}}>
         <Row>
           <Col className='text-center'>
             <div className='hero-caption'>
@@ -100,8 +117,10 @@ const HomePage = () => {
               <p>Email: <a href="mailto:johndoe@xyz.in">johndoe@xyz.in</a></p>
               <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
               <p>Address: 123, Main Street, City, Country</p>
-              <p>Follow us on: <a href="https://www.facebook.com">Facebook</a>, <a href="https://www.twitter.com">Twitter</a>, <a href="https://www.instagram.com">Instagram</a></p>
-              <p>Download our app: <a href="https://www.google.com">Google Play</a>, <a href="https://www.apple.com">App Store</a></p>
+              <p>Follow us on: <a href="https://www.facebook.com">Facebook</a>, <a
+                href="https://www.twitter.com">Twitter</a>, <a href="https://www.instagram.com">Instagram</a></p>
+              <p>Download our app: <a href="https://www.google.com">Google Play</a>, <a href="https://www.apple.com">App
+                Store</a></p>
             </div>
           </Col>
         </Row>
