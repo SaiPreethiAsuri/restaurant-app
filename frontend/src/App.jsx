@@ -4,10 +4,12 @@ import {Route, Routes} from "react-router-dom";
 import Auth from "./pages/auth/auth.jsx";
 import HomePage from "./pages/home-page/home-page.jsx";
 import Adminpage from "./pages/admin-page/admin-page.jsx";
+import CustomNavbar from "./components/navbar/customNavbar.jsx";
 
 function App() {
   return (
     <>
+      <CustomNavbar/>
       <Routes>
         <Route path="/" element={<Auth />} />
         <Route path="/login" element={<Auth />} />

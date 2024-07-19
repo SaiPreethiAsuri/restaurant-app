@@ -1,4 +1,3 @@
-import CustomNavbar from "../../components/navbar/customNavbar.jsx";
 import {Col, Container, Row} from "react-bootstrap";
 import './home-page.css';
 import {Link} from "react-router-dom";
@@ -6,7 +5,6 @@ import {Link} from "react-router-dom";
 const HomePage = () => {
   return (
     <div className="bg-body-tertiary">
-      <CustomNavbar/>
       <Container className='mt-5 py-5'>
         <Row>
           <Col className='ms-5'>
