@@ -2,22 +2,21 @@ import {Link} from 'react-router-dom';
 import {Button, Container, Dropdown, Nav, Navbar} from "react-bootstrap";
 import './customNavbar.css';
 import {AiOutlineShoppingCart, AiOutlineUser} from "react-icons/ai";
+import PropTypes from "prop-types";
+import brandIcon from '../../assets/images/foodKing.png';
 
-const CustomNavbar = () => {
-  // Check if url pathName is not admin
-  const isAdmin = window.location.pathname !== '/admin';
-  // const userDetails = localStorage.getItem('userDetails');
-
+const CustomNavbar = (props) => {
+  console.log('props', props);
   const userDetails = localStorage.getItem('userDetails');
   return (
     <Navbar bg="light" expand="lg" style={{maxWidth: '1900px'}}>
       <Container>
-        <Navbar.Brand href="#home"><img style={{maxWidth: '150px'}} src={'src/assets/images/foodKing.png'}
+        <Navbar.Brand href="/home"><img style={{maxWidth: '150px'}} src={brandIcon}
                                         alt={'Brand Icon'}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
           <Nav activeKey='/home' className="me-auto centered-nav fs-5">
-            {isAdmin &&
+            {props.isAdmin &&
               <>
                 <Nav.Item><Nav.Link to="/home">Home</Nav.Link></Nav.Item>
                 <Nav.Item><Nav.Link className="ms-4 me-2" to="/menu">Menu</Nav.Link></Nav.Item>
@@ -27,7 +26,7 @@ const CustomNavbar = () => {
             }
           </Nav>
           <Nav className={'w-25'}>
-            {isAdmin && <Nav.Link className="nav-link fs-4" to="/cart"><AiOutlineShoppingCart/></Nav.Link>}
+            {props && <Nav.Link className="nav-link fs-4" to="/cart"><AiOutlineShoppingCart/></Nav.Link>}
             {
               userDetails ?
                 <Dropdown>
@@ -50,6 +49,10 @@ const CustomNavbar = () => {
       </Container>
     </Navbar>
   );
-}
+};
+
+CustomNavbar.propTypes = {
+  isAdmin: PropTypes.bool
+};
 
 export default CustomNavbar;
