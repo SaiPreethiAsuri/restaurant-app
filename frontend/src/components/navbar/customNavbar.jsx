@@ -28,7 +28,7 @@ const CustomNavbar = (props) => {
           <Nav className={'w-25'}>
             {props && <Nav.Link className="nav-link fs-4" to="/cart"><AiOutlineShoppingCart/></Nav.Link>}
             {
-              userDetails ?
+              userDetails.length==0 ?
                 <Dropdown>
                   <Dropdown.Toggle variant="outline-light" id="dropdown-basic" className="nav-link fs-4">
                     <AiOutlineUser/>

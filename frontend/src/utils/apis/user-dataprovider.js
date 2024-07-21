@@ -1,4 +1,4 @@
-import {getData} from './api-dataprovider';
+import { getData, postData } from './api-dataprovider';
 
 const getUsersList = async () => {
   try {
@@ -7,5 +7,19 @@ const getUsersList = async () => {
     console.error(error);
   }
 }
+const loginUser = async (path, data) => {
+  try {
+    return await postData(path, data)
+  } catch (error) {
+    console.log(error);
+  }
+}
+const registerUser = async (path, data) => {
+  try {
+    return await postData(path, data)
+  } catch (error) {
+    console.log(error)
+  }
+}
 
-export { getUsersList };
+  export { getUsersList, loginUser,registerUser };
