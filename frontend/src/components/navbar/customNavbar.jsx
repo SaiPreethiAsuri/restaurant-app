@@ -18,10 +18,10 @@ const CustomNavbar = (props) => {
           <Nav activeKey='/home' className="me-auto centered-nav fs-5">
             {props.isAdmin &&
               <>
-                <Nav.Item><Nav.Link to="/home">Home</Nav.Link></Nav.Item>
-                <Nav.Item><Nav.Link className="ms-4 me-2" to="/menu">Menu</Nav.Link></Nav.Item>
-                <Nav.Item><Nav.Link className="me-4 ms-2" to="/about">About</Nav.Link></Nav.Item>
-                <Nav.Item><Nav.Link to="/contact">Contact</Nav.Link></Nav.Item>
+                <Nav.Item><Link className="text-decoration-none text-dark" to="/home">Home</Link></Nav.Item>
+                <Nav.Item><Link className="ms-4 me-2 text-decoration-none text-dark" to="/foodMenu">Menu</Link></Nav.Item>
+                <Nav.Item><Link className="me-4 ms-2 text-decoration-none text-dark" to="/about">About</Link></Nav.Item>
+                <Nav.Item><Link className="text-decoration-none text-dark" to="/contact">Contact</Link></Nav.Item>
               </>
             }
           </Nav>

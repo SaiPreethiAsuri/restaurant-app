@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const HomePage = () => {
   return (
     <div className="bg-body-tertiary">
-      <Container className='mt-5 py-5'>
+      <Container className='py-5'>
         <Row>
           <Col className='ms-5'>
             <div className='hero-caption'>
@@ -126,7 +126,7 @@ const HomePage = () => {
       <Container className='bg-body-tertiary'>
         <Row>
           <Col className='text-center'>
-            <div className='hero-description'>
+            <div className='hero-description fs-6'>
               <span>&copy; 2024 Food Delivery. All rights reserved.</span>
             </div>
           </Col>
