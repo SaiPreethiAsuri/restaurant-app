@@ -3,9 +3,9 @@ import {Nav} from "react-bootstrap";
 const sidebar = () => {
   return (
     <div>
-      <Nav defaultActiveKey="/admin" className="flex-column">
+      <Nav defaultActiveKey="/admin/dashboard" className="flex-column">
         <Nav.Link className={"text-decoration-none text-dark fw-semibold fs-5"}
-                  href="/admin">Dashboard</Nav.Link>
+                  href="/admin/dashboard">Dashboard</Nav.Link>
         <Nav.Link className={"text-decoration-none text-dark fw-semibold fs-5"}
                   href="/admin/users">Users</Nav.Link>
         <Nav.Link className={"text-decoration-none text-dark fw-semibold fs-5"}
