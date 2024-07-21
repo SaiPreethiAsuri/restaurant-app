@@ -8,6 +8,9 @@ import CustomNavbar from "./components/navbar/customNavbar.jsx";
 import FoodItemPage from "./pages/food-item-page/food-item-page.jsx";
 import FoodItemAdd from "./pages/food-item-page/food-item-add/FoodItemAdd.jsx";
 import FoodMenu from "./pages/food-menu/food-menu.jsx";
+import About from "./pages/about-page/about-page.jsx";
+import Contact from "./pages/contact-page/contact-page.jsx";
+import NotFound from "./pages/not-found-page/not-found-page.jsx";
 
 function App() {
   const path = window.location.pathname;
@@ -27,10 +30,9 @@ function App() {
           <Route path="foodItems" element={<FoodItemPage/>} />
           <Route path="foodItems/add" element={<FoodItemAdd/>} />
         </Route>
-        {/*<Route path="/about" element={<About />} />*/}
-        {/*<Route path="/services" element={<Services />} />*/}
-        {/*<Route path="/contact" element={<Contact />} />*/}
-        {/*<Route path="*" element={<NotFound />} />*/}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )
