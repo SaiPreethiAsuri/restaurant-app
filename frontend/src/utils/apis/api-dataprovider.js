@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+const url = "http://localhost:3000";
+
 const getData = async (path) => {
   try {
-    const response = await axios.get(path);
+    const response = await axios.get(url + path);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -11,7 +13,7 @@ const getData = async (path) => {
 
 const postData = async (path, data) => {
   try {
-    const response = await axios.post(path, data);
+    const response = await axios.post(url + path, data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -20,7 +22,7 @@ const postData = async (path, data) => {
 
 const putData = async (path, data) => {
   try {
-    const response = await axios.put(path, data);
+    const response = await axios.put(url + path, data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -29,7 +31,7 @@ const putData = async (path, data) => {
 
 const deleteData = async (path) => {
   try {
-    const response = await axios.delete(path);
+    const response = await axios.delete(url + path);
     return response.data;
   } catch (error) {
     console.error(error);
